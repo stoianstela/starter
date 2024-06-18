@@ -46,6 +46,12 @@ exports.getTour = catchAsync(async (req, res, next) => {
     });
   };
 
+  exports.getSingupForm = (req, res) => {
+    res.status(200).render("signup", {
+      title: "create your account!"
+    });
+  };
+
   exports.getAccount = (req, res) => {
     res.status(200).render('account', {
       title: 'Your account'
@@ -84,3 +90,9 @@ exports.getTour = catchAsync(async (req, res, next) => {
       user: updatedUser
     });
   });
+
+  exports.getForgotPasswordForm = (req, res) => {
+    res.status(200).render('forgotPassword', {
+        title: 'Reset Your Password'
+    });
+};
