@@ -19,7 +19,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) =>
         const product = await stripe.products.create({
             name: `${tour.name} Tour`,
             description: tour.summary,
-            images: [`http://127.0.0.1:3000/img/tours/${tour.imageCover}`],
+            images: [`/img/tours/${tour.imageCover}`],
           });
          
           const price = await stripe.prices.create({
