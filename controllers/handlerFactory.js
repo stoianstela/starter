@@ -48,7 +48,6 @@ exports.createOne = Model =>
     });
   });
 
-  
     
 exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
@@ -92,4 +91,3 @@ exports.getAll = Model =>
     });
   });
  
-  
